@@ -5,4 +5,5 @@
 4. a program that prints the alphabet in lowercase
 5. a program that prints all single digit numbers of base 10 starting from 0
 6. a program that prints all single digit numbers of base 10 starting from 0 using putchar twice
-7. 
+7. a program that prints the lowercase alphabet in reverse
+8.
