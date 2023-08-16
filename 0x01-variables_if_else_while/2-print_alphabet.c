@@ -4,7 +4,7 @@
  * main - prints the alphabet in lowercase
  * Return: always 0
  */
-int main()
+int main(void)
 {
 	/*variable declaration*/
 	int alphabet = 'a';
@@ -18,6 +18,3 @@ int main()
 
 	return (0);
 }
-
-	
-
