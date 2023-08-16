@@ -1,17 +1,24 @@
 #include <stdio.h>
 
 /**
- * main - prints all single digit numbers of base 10 starting from 0
+ * main - prints all the numbers of base 16 in lowercase
  * Return: 0 always
  */
 int main(void)
 {
 	/*variable declaration*/
-	int a;
+	int num;
+	int alphabet = 97;
 	/*for loop for printing the digits*/
-	for (a = 48; a <= 57; a++)
+	for (num = 48; num <= 57; num++)
 	{
-		putchar(a);
+		putchar(num);
+	}
+	/*while loop to print lowercase base 16*/
+	while (alphabet <= 102)
+	{
+		putchar(alphabet);
+		alphabet++;
 	}
 	putchar('\n');
 
