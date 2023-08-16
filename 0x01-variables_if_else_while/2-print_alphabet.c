@@ -1,14 +1,23 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
-/* main -  */
-int main(void)
+/**
+ * main - prints the alphabet in lowercase
+ * Return: always 0
+ */
+int main()
 {
-	int n;
+	/*variable declaration*/
+	int alphabet = 'a';
+	/*while loop to display letters a to z*/
+	while (alphabet <= 'z')
+	{
+		putchar(alphabet);
+		alphabet++;
+	}
+	putchar('\n');
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
 	return (0);
 }
+
+	
+
