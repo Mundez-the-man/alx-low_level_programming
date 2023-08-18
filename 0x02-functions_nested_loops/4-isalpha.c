@@ -11,7 +11,7 @@
 int _isalpha(int c)
 {
 	/*if-else function checks of character is an alphabet*/
-	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
 		return (1);
 	}
