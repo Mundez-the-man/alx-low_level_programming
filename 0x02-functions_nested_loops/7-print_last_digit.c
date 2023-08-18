@@ -1,18 +1,13 @@
 #include "main.h"
 
-
-/**
- * print_last_digit - prints last digit
- * @n: number to compute last digit for
- * Return: last digit
- **/
-
-int print_last_digit(int n)
+int print_last_digit(int r)
 {
-	n = n % 10;
+	r = r % 10;
+	if (r < 0)
+	{
+		r -= (r * 2);
+	}
+	_putchar('0' + r);
 
-	if (n < 0)
-		n = -n;
-	_putchar(n + '0');
-	return (n);
+	return (r);
 }
