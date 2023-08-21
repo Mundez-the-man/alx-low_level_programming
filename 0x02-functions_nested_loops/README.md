@@ -10,4 +10,7 @@
 9. a function that prints the 9 times table
 10. a function that adds two integers and returns the result
 11. a function that prints all natural numbers from n to 98
-12. a function that prints the n times table  
+12. a function that prints the n times table
+13. a program that computes and prints the sum of all the multiples of 3 or 5 below 1024
+14. a program that prints the first 50 Fibonacci numbers, starting with 1 and 2
+15.    
