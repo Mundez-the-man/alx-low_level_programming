@@ -9,20 +9,19 @@
 
 int main(void)
 {
-	int count;
-	unsigned long x, y, z;
-
+	unsigned int x, y, z;
+	unsigned long count;
 	x = 0;
 	y = 1;
 
-	for (count = 1; count <= 49; count++)
+	do
 	{
 		z = x + y;
 		x = y;
 		y = z;
-		printf("%lu, ", z);
-	}
+		count += z;
+	} while (z <= 4000000);
 
-	printf("%lu\n", z + x);
+	printf("%lu\n", count);
 	return (0);
 }
