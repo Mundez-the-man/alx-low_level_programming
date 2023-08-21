@@ -1,52 +1,41 @@
 #include "main.h"
-/**
- * print_times_table - print times table up to input
- *
- * Description: Writes times table up to imput not exceeding 15
- *
- * @n: size of times table
- *
- * Return: Nothing
- */
 
+/**
+ * print_times_table - prints the n times table
+ * @n: number of times table
+ * Return: nothing
+ */
 void print_times_table(int n)
 {
-	int y, x, prod;
+	/*variables declaration*/
+	int i, j, mul;
 
-	if (n <= 15 && n >= 0)
+	if (n < 0 || n > 15)
+		return;
+	/*for loops to produce the times table of n*/
+	for (i = 0; i < n + 1; i++)
 	{
-		for (y = 0; y <= n; y++)
+		for (j = 0; j < n + 1; j++)
 		{
-			for (x = 0; x <= n; x++)
+			mul = i * j;
+			/* if statements to print space(s) */
+			if (j != 0)
 			{
-				prod = (y * x);
-				if (x != 0)
-				{
-					_putchar(',');
+				_putchar(' ');
+				if (mul < 100)
 					_putchar(' ');
-				}
-				if (prod < 10 && x != 0)
-				{
+				if (mul < 10)
 					_putchar(' ');
-					_putchar(' ');
-					_putchar((prod % 10) + '0');
-				}
-				else if (prod >= 10 && prod < 100)
-				{
-					_putchar(' ');
-					_putchar((prod / 10) + '0');
-					_putchar((prod % 10) + '0');
-				}
-				else if (prod >= 100 && x != 0)
-				{
-					_putchar((prod / 100) + '0');
-					_putchar((prod / 10) % 10 + '0');
-					_putchar((prod % 10) + '0');
-				}
-				else
-					_putchar((prod % 10) + '0');
 			}
-			_putchar('\n');
+			/* Print the multiples and ',' */
+			if (mul > 99)
+				_putchar('0' + mul / 100);
+			if (mul > 9)
+				_putchar('0' + mul % 100 / 10);
+			_putchar('0' + mul % 10);
+			if (j != n)
+				_putchar(',');
 		}
+		_putchar('\n');
 	}
 }
