@@ -12,7 +12,7 @@ void print_to_98(int n)
 	while (n != 98)
 	{
 		printf("%d, ", n);
-		n += (n < 98) ? 1: -1;
+		n += (n < 98) ? 1 : -1;
 	}
 
 	/* print the value of n when it is equal to 98 */
