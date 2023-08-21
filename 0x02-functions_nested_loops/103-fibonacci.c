@@ -2,24 +2,26 @@
 #include "main.h"
 
 /**
- * main - print the first 50 fibonacci numbers
- *
+ * main - prints the sum of the even-valued terms
  * Return: Nothing.
  */
-
 int main(void)
 {
-	unsigned int x, y, z;
+	/* variable declaration */
+	unsigned int x = 0;
+	unsigned int y = 1;
+	unsigned int z;
 	unsigned long count;
-	x = 0;
-	y = 1;
-
-	do
-	{
+	/* do-while statement to get the sum of the even Fibonacci numbers */
+	do {
 		z = x + y;
 		x = y;
 		y = z;
-		count += z;
+
+		if (z % 2 == 0)
+		{
+			count += z;
+		}
 	} while (z <= 4000000);
 
 	printf("%lu\n", count);
