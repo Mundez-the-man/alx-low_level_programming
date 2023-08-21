@@ -8,4 +8,5 @@
 7. a function that prints the last digit of a number
 8. a function that prints every minute of the day
 9. a function that prints the 9 times table
-10. a function that adds two integers and returns the result  
+10. a function that adds two integers and returns the result
+11. a function that prints all natural numbers from n to 98  
