@@ -2,3 +2,5 @@
 1. a function that swaps the values of two integers.
 2. a function that returns the length of a string.
 3. a function that prints a string
+4. a function that prints a string, in reverse
+5. 
