@@ -5,3 +5,5 @@
 4. a function that prints a string, in reverse
 5. a function that reverses a string.
 6. a function that prints every other character of a string, starting with the first character
+7. a function that prints half of a string, followed by a new line. The function should print the second half of the string.
+8. 
