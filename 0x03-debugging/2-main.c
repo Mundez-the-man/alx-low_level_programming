@@ -6,14 +6,14 @@
 * Return: 0
 */
 
-int main(void)
+int main()
 {
         int a, b, c;
         int largest;
 
-        a = 972;
-        b = -98;
-        c = 0;
+        a = -98;
+        b = 0;
+        c = 972;
 
         largest = largest_number(a, b, c);
 
