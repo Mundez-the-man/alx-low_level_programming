@@ -3,3 +3,4 @@
 it will use at most n bytes from src; and
 src does not need to be null-terminated if it contains n or more bytes
 2. Your function should work exactly like strncpy
+3. function should work exactly like strcmp
