@@ -9,12 +9,12 @@
  * Return: pointer to memory
  **/
 
-char *_memset(char *s, char b, unsigned int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	for (; n > 0; n--)
 	{
-		s[n - 1] = b;
+		dest[n - 1] = src[n - 1];
 	}
 
-	return (s);
+	return (dest);
 }
