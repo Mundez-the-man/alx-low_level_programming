@@ -10,4 +10,4 @@
 7. a function that draws a diagonal line
 8. a function that prints a square
 9. a program that prints the numbers from 1 to 100, But for multiples of three print Fizz instead of the number and for the multiples of five print Buzz,  For numbers which are multiples of both three and five print FizzBuzz.
-10. 
+10. a function that prints a triangle

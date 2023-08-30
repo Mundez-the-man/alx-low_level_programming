@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * print_square - prints a square
- * @size: size of the square
+ * print_triangle - prints a triangle
+ * @size: size of the triangle
  */
 
 void print_triangle(int size)
 {
 	int i, j;
-	/* if size is greater than 0 print square */
+	/* if size is greater than 0 print triangle */
 	if (size <= 0)
 	{
 		_putchar('\n');
