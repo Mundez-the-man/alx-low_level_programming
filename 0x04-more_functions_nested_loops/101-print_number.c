@@ -9,7 +9,6 @@ void print_number(int n)
 	int m, i;
 	/* variable assignment */
 	i = 1;
-	m = n;
 	/* change negative number to positive */
 	if (n < 0)
 	{
@@ -17,6 +16,7 @@ void print_number(int n)
 		n = -n;
 	}
 	/* while statement creates a counter for dividing 9 */
+	m = n;
 	while (m > 9)
 	{
 		m /= 10;
