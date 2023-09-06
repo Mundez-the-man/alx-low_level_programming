@@ -14,6 +14,7 @@ void print_rev(char *s)
 	{
 	}
 	/* print the characters of a string in reverse */
+	count--; /* Adjust count to the last valid index */
 	while (count >= 0)
 	{
 		_putchar(s[count]);
