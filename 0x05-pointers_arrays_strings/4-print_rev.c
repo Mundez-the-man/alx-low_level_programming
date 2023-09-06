@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * print_rev - prints a string in reverse
  * @s: string to be printed in reverse
@@ -14,6 +14,9 @@ void print_rev(char *s)
 	{
 	}
 	/* print the characters of a string in reverse */
+	
+	printf("count = %d\n", count);
+
 	count--; /* Adjust count to the last valid index */
 	while (count >= 0)
 	{
