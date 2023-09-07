@@ -1,98 +1,67 @@
-#include "main.h"
-#include <stdio.h>
+#include "holberton.h"
 #include <stdlib.h>
+
 /**
- * findword - find position of next word
- * @s: string
- * Return: position of next word
- **/
-int findword(char *s)
+ * ch_free_grid - frees a 2 dimensional array.
+ * @grid: multidimensional array of char.
+ * @height: height of the array.
+ *
+ * Return: no return
+ */
+void ch_free_grid(char **grid, unsigned int height)
 {
-	int i;
-
-	for (i = 0; s[i] == ' '; i++)
-		;
-
-	return (i);
-}
-/**
- * wordlen - find length of word
- * @s: string
- * Return: length of word
- **/
-int wordlen(char *s)
-{
-
-	int i;
-
-	for (i = 0; s[i] != '\0' && s[i] != ' '; i++)
-		;
-	return (i);
-}
-/**
- * word_count - find number of words in string
- * @s: string
- * @word: switch used to track if currently in word
- * Return: number of words in string
- **/
-int word_count(char *s, int word)
-{
-
-	if (s == NULL || s[0] == '\0')
-		return (0);
-
-	if (s[0] == ' ')
-		return (word_count(++s, 0));
-
-	else if (s[0] != ' ' && s[0] != '\0' && word == 1)
+	if (grid != NULL && height != 0)
 	{
-		return (word_count(++s, 1));
+		for (; height > 0; height--)
+			free(grid[height]);
+		free(grid[height]);
+		free(grid);
 	}
-	else if (s[0] != ' ' && s[0] != '\0' && word == 0)
-	{
-		return (word_count(++s, 1) + 1);
-	}
-
-	return (0);
 }
+
 /**
- * strtow - create an array of words from string
- * @str: string
- * Description: create array of words from string, last element should be null
- * Return: pointer to strings, NULL if fails
- **/
+ * strtow - splits a string into words.
+ * @str: string.
+ *
+ * Return: pointer of an array of integers
+ */
 char **strtow(char *str)
 {
-	char **list;
-	int num_words, i, k, j;
+	char **aout;
+	unsigned int c, height, i, j, a1;
 
-	j = 0;
-	num_words = word_count(str, 0);
-
-	if (str == NULL || num_words == 0)
+	if (str == NULL || *str == '\0')
 		return (NULL);
-	list = malloc((num_words + 1) * sizeof(char *));
-	if (list == NULL)
-		return (NULL);
-
-	for (i = 0; i < num_words; i++)
+	for (c = height = 0; str[c] != '\0'; c++)
+		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
+			height++;
+	aout = malloc((height + 1) * sizeof(char *));
+	if (aout == NULL || height == 0)
 	{
-		j += findword(&str[j]);
-		list[i] = (char *)malloc((wordlen(str) + 1) * sizeof(char));
-		if (list[i] == NULL)
-		{
-			for (i = i - 1; i >= 0; i--)
-				free(list[i]);
-			free(list);
-			return (NULL);
-		}
-		for (k = 0; str[j] != ' ' && str[j] != '\0'; k++)
-		{
-			list[i][k] = str[j];
-			j++;
-		}
-		list[i][k] = '\0';
+		free(aout);
+		return (NULL);
 	}
-	list[i] = NULL;
-	return (list);
+	for (i = a1 = 0; i < height; i++)
+	{
+		for (c = a1; str[c] != '\0'; c++)
+		{
+			if (str[c] == ' ')
+				a1++;
+			if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
+			{
+				aout[i] = malloc((c - a1 + 2) * sizeof(char));
+				if (aout[i] == NULL)
+				{
+					ch_free_grid(aout, i);
+					return (NULL);
+				}
+				break;
+			}
+		}
+		for (j = 0; a1 <= c; a1++, j++)
+			aout[i][j] = str[a1];
+		aout[i][j] = '\0';
+	}
+	aout[i] = NULL;
+	return (aout);
 }
