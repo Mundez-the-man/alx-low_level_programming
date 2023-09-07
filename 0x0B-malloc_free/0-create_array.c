@@ -1,23 +1,26 @@
+#include <stdlib.h>
 #include "main.h"
-
 /**
- * _puts_recursion - print string
- * @s: string to print
- * Description: print string using recursion
- * Return: nothing
- **/
-
-void _puts_recursion(char *s)
+ * create_array - check the code for Holberton School students.
+ * @size: argument for size of the array
+ * @c: argument for char
+ * Return: Always 0.
+ */
+char *create_array(unsigned int size, char c)
 {
-	int i;
+	char *my_array;
+	unsigned int i = 0;
 
-	i = 0;
+	my_array = malloc(size * sizeof(c));
 
-	if (s[i] != '\0')
+	while (i < size)
 	{
-		_putchar(s[i]);
-		_puts_recursion(&s[i + 1]);
+		if (my_array == NULL)
+		{
+			return (NULL);
+		}
+		my_array[i] = c;
+		i++;
 	}
-	else
-		_putchar('\n');
+	return (my_array);
 }
