@@ -9,7 +9,7 @@ void puts_half(char *str)
 {
 	/* Initialize variables */
 	int count, half;
-	/* calculate lenght of string */
+	/* calculate length of string */
 	for (count = 0; str[count] != '\0'; count++)
 	{
 	}
@@ -20,7 +20,7 @@ void puts_half(char *str)
 	{
 		_putchar(str[half]);
 	}
-	/*print new liine after the string */
+	/*print new line after the string */
 	_putchar('\n');
 
 }

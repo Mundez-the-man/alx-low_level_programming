@@ -23,7 +23,7 @@ void print_rev(char *s)
 		_putchar(s[count]);
 		count--;
 	}
-	/*print new liine after the string */
+	/*print new line after the string */
 	_putchar('\n');
 
 }

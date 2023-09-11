@@ -14,7 +14,7 @@ void _puts(char *str)
 	{
 		_putchar(str[count]);
 	}
-	/*print new liine after the string */
+	/*print new line after the string */
 	_putchar('\n');
 
 }

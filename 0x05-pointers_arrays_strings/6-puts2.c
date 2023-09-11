@@ -12,13 +12,13 @@ void puts2(char *str)
 	/* loop through until a null character (\0) is encountered */
 	for (count = 0; str[count] != '\0'; count++)
 	{
-		/* print even chactares only */
+		/* print even chacters only */
 		if (count % 2 == 0 || count == 0)
 		{
 			_putchar(str[count]);
 		}
 	}
-	/*print new liine after the string */
+	/*print new line after the string */
 	_putchar('\n');
 
 }
