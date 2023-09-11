@@ -1,26 +1,33 @@
 #include "main.h"
 
 /**
- * puts_half - prints half of a string.
- * @str: string to be inputted.
+ * puts2 - prints even characters of a string
+ * @str: string to be printed
  */
+
 void puts_half(char *str)
 {
-	int count = 0, i;
-
-	while (count >= 0)
+	/* Initialize variable to count characters */
+	int count, half, i;
+	/* loop through until a null character (\0) is encountered */
+	for (count = 0; str[count] != '\0'; count++)
 	{
-		if (str[count] == '\0')
-			break;
-		count++;
 	}
 
-	if (count % 2 == 1)
-		i = count / 2;
+	if (count % 2 == 0)
+	{
+		half = count / 2;
+	}
 	else
-		i = (count - 1) / 2;
+	{
+		half = count / 2 + 1;
+	}
 
-	for (i++; i < count; i++)
+	for (i = half; i <= count; i++)
+        {
 		_putchar(str[i]);
+        }
+	/*print new liine after the string */
 	_putchar('\n');
+
 }
