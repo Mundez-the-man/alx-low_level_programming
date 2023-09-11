@@ -14,12 +14,12 @@ void puts_half(char *str)
 	{
 	}
 	/* Calculate the starting position of printing */
-	half = (count + 1) / 2 ;
+	half = (count + 1) / 2;
 	/* print second half of string */
 	for (; str[half] != '\0'; half++)
-        {
+	{
 		_putchar(str[half]);
-        }
+	}
 	/*print new liine after the string */
 	_putchar('\n');
 
