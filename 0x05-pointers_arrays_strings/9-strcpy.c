@@ -1,6 +1,6 @@
 #include "main.h"
 
-/** 
+/**
 *_strcpy - a function that copies the string
 *@dest: destination buffer
 *@src: source string
@@ -11,10 +11,9 @@ char *_strcpy(char *dest, char *src)
 {
 	int i;
 	/* Assign src into dest */
-	while ((dest[i] = src [i]) != '\0')
+	for (i = 0; (dest[i] = src[i]) != '\0'; i++)
 	{
-		i++;
 	}
-	return dest;
+	return (dest);
 }
 
