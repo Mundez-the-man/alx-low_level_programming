@@ -12,13 +12,16 @@ void print_array(int *a, int n)
 	/* Initialize variable to count characters */
 	int num;
 
-	printf("%d", a[0]);
-	/* print the elements of the array */
-	for (num = 1; num < n; num++)
+	if (n >= 0)
 	{
-		printf(", %d", a[num]);
+		printf("%d", a[0]);
+		/* print the elements of the array */
+		for (num = 1; num < n; num++)
+		{
+			printf(", %d", a[num]);
+		}
 	}
-	/*print new line after the string */
+	/* print new line after the string */
 	putchar('\n');
 
 }
