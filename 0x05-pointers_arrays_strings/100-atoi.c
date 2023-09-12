@@ -4,11 +4,11 @@
   * _atoi - a function that convert a string to an integer
   * @s: pointer to the string to be converted
   *
-  * Return: signed integer
+  * Return: integer value
   */
 int _atoi(char *s)
 {
-	int num, sign, count;
+	unsigned int num, sign, count;
 
 	num = 0;
 	sign = 1;
@@ -17,20 +17,17 @@ int _atoi(char *s)
 	{
 		if ( *(s + count) >= '0' && *(s + count) <= '9')
 		{
-			num = num * 10 + *(s + count) - '0';
+			num = num * 10 + (*(s + count) - '0');
 
 			if ( !(*(s + (count + 1)) >= '0' && *(s + (count + 1)) <= '9'))
 			{
 				break;
 			}
 		}
-		else
+		else if ( *(s + count) == '-')
 		{
-			if ( *(s + count) == '-')
-			{
-				sign *= -1;
-			}
-		}
+			sign *= -1;
+		} 
 	}
 
 	return (sign * num);
