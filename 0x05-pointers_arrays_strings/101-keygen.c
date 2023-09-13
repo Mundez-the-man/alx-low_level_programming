@@ -6,7 +6,9 @@ int main()
 {
 	srand(time(NULL));
 
-	int random_number = rand();
+	int random_number;
+	
+	random_number = rand();
 
 	printf("%d\n", random_number);
 
