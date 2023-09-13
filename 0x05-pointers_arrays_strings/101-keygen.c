@@ -4,10 +4,10 @@
 
 int main()
 {
+	int random_number;
+
 	srand(time(NULL));
 
-	int random_number;
-	
 	random_number = rand();
 
 	printf("%d\n", random_number);
