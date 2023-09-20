@@ -4,7 +4,7 @@
  * string_toupper - changes all lowercase letters of a string to uppercase
  * @a: string
  *
- * Return: upper case string
+ * Return: pointer to the converted string
  */
 char *string_toupper(char *a)
 {
@@ -14,7 +14,7 @@ char *string_toupper(char *a)
 	{
 		if (a[i] > 96 && a[i]  < 123) /* check if character is lowercase */
 		{
-			a[i] = a[i] - 32; /* change lower case character to uppercase */
+			a[i] -= 32; /* change lower case character to uppercase */
 		}
 	}
 
