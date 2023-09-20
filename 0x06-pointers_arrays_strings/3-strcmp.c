@@ -9,14 +9,13 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int i, j;
+	int i;
 	/* check each string character */
 	for (i = 0; s1[i] != '\0' && s2[i] != '\0'; i++)
 	{
 		if (s1[i] != s2[i]) /* locate the first non-equal characters */
 		{
-			j = s1[i] - s2[i]; /* find the difference between the characters */
-			return (j); /* return the difference */
+			return (s1[i] - s2[i]); /* return the difference between the characters */
 		}
 	}
 
