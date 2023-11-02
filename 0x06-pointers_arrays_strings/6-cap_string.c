@@ -12,7 +12,7 @@ char *cap_string(char *a)
 
 	for (i = 0; a[i] != '\0'; i++)
 	{
-		if (a[i] == 32 || a[i] == '\t' || a[i] == '\n' || a[i] == 44)
+		if (a[i] == 32 || a[i] == 9 || a[i] == 10 || a[i] == 44)
 			if (a[i + 1] > 96 && a[i + 1]  < 123) /* check if character is lowercase */
 			{
 				a[i + 1] -= 32; /* change lower case character to uppercase */
