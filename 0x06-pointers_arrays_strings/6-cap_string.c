@@ -1,30 +1,39 @@
 #include "main.h"
+#include <ctype.h>
+
 /**
- * cap_string - capitalizes all words of a string
- * @s: input string.
- * Return: the pointer to dest.
+ * cap_string - capitalizes all words of a string after word separators
+ * @a: string to be capitalized
+ *
+ * Return: pointer to the converted string
  */
-
-char *cap_string(char *s)
+char *cap_string(char *a)
 {
-	int count = 0, i;
-	int sep_words[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
+	/* Intialize counters */
+	int i;
+	unsigned long int n;
+	/* Intilize word separataors in ASCII */
+	int sep[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	if (*(s + count) >= 97 && *(s + count) <= 122)
-		*(s + count) = *(s + count) - 32;
-	count++;
-	while (*(s + count) != '\0')
+	if (islower(a[0])) /* Check if character is lowercase */
 	{
-		for (i = 0; i < 13; i++)
+		a[0] = toupper(a[0]); /* change lower case character to uppercase */
+	}
+
+	/* Check current character in string */
+	for (i = 0; a[i] != '\0'; i++)
+	{
+		for (n = 0; n < sizeof(sep) / sizeof(sep[n]); n++)
 		{
-			if (*(s + count) == sep_words[i])
+			if (a[i] == sep[n]) /*Check if character is a word separator */
 			{
-				if ((*(s + (count + 1)) >= 97) && (*(s + (count + 1)) <= 122))
-					*(s + (count + 1)) = *(s + (count + 1)) - 32;
-				break;
+				if (islower(a[i + 1])) /* Check if character is lowercase */
+				{
+					a[i + 1] = toupper(a[i + 1]); /* change lower case character to uppercase */
+				}
 			}
 		}
-		count++;
 	}
-	return (s);
+
+	return (a);
 }
