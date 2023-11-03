@@ -29,7 +29,7 @@ char *cap_string(char *a)
 			{
 				if (islower(a[i + 1])) /* Check if character is lowercase */
 				{
-					a[i + 1] = toupper(a[i + 1]); /* change lower case character to uppercase */
+					a[i + 1] = toupper(a[i + 1]); /* change to uppercase */
 				}
 			}
 		}
