@@ -10,11 +10,6 @@
  */
 char *_strchr(char *s, char c)
 {
-	if (*s == c)
-	{
-		return (s);
-	}
-
 	/* Loop through the characters in the string */
 	for (; *s != '\0'; s++)
 	{
@@ -23,6 +18,11 @@ char *_strchr(char *s, char c)
 		{
 			return (s);
 		}
+	}
+
+	if (*s == c)
+	{
+		return (s);
 	}
 
 	/* If target character is not found, return NULL */
