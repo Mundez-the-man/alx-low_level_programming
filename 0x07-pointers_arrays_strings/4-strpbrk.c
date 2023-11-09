@@ -10,27 +10,23 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	unsigned int i;
-	char *location;
 	char *temp_accept;
 
-	i = 0;
 	/* Loop through characters in s */
-	while (*(s + i) != '\0')
+	while (*s != '\0')
 	{
 		/* Reset temp_accept to the beginning of accept */
 		temp_accept = accept;
 		/* Loop through the characters of accept */
 		while (*temp_accept != '\0')
 		{
-			if (*(s + i) == *temp_accept) /* Check for match */
+			if (*s == *temp_accept) /* Check for match */
 			{
-				location = s + i; /* Set location to the matching character in s */
-				return (location); /* return the found location */
+				return (char *)s; /* return the found location */
 			}
-			temp_accept++; /* Move to the next character in accept*/
+			temp_accept++; /* Move t:o the next character in accept*/
 		}
-		i++; /* move to the next character in s */
+		s++; /* move to the next character in s */
 	}
 
 	return (NULL); /* If not match is found return NULL */
