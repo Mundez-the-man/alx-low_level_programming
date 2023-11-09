@@ -11,8 +11,7 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i, k, j;
-	char *location;
+	unsigned int i, j;
 
 	if (needle[0] == '\0')
 	{
@@ -29,7 +28,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 		if (needle[j] == '\0') /* check if entire substring has been checked */
 		{
-			return (&haystacck[i]); /* return staring location of substring */
+			return (&haystack[i]); /* return staring location of substring */
 		}
 	}
 	return (NULL); /* return NULL if substring is not found */
