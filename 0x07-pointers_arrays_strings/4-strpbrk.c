@@ -22,7 +22,7 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (*s == *temp_accept) /* Check for match */
 			{
-				return (char *)s; /* return the found location */
+				return ((char *)s); /* return the found location */
 			}
 			temp_accept++; /* Move t:o the next character in accept*/
 		}
