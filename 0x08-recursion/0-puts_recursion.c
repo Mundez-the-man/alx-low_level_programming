@@ -6,9 +6,6 @@
  */
 void _puts_recursion(char *s)
 {
-	/* prints the characters of a string */
-	_putchar(*s);
-
 	/* Check if the end of the string has been reached */
 	if (*s == '\0')
 	{
@@ -17,7 +14,10 @@ void _puts_recursion(char *s)
 	}
 	else
 	{
-	/* if not, make a recursive call to with the next character */
-	_puts_recursion(s + 1);
+		/* prints the characters of a string */
+		_putchar(*s);
+		
+		/* if not, make a recursive call to with the next character */
+		_puts_recursion(s + 1);
 	}
 }
