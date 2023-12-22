@@ -16,7 +16,7 @@ void _puts_recursion(char *s)
 	{
 		/* prints the characters of a string */
 		_putchar(*s);
-		
+	
 		/* if not, make a recursive call to with the next character */
 		_puts_recursion(s + 1);
 	}
