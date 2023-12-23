@@ -11,7 +11,7 @@ void _print_rev_recursion(char *s)
 	{
 		/* Calling recursive function by increasing string's character */
 		_print_rev_recursion(s + 1);
+		/* print each character by recurring back */
+		_putchar(*s);
 	}
-	/* print each character by recurring back */
-	_putchar(*s);
 }
