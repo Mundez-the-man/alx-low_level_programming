@@ -4,5 +4,5 @@
 3. a function that adds a new node at the end of a dlistint_t list.
 4. a function that frees a dlistint_t list.
 5. a function that returns the nth node of a dlistint_t linked list.
-6. 
-   
+6. a function that returns the sum of all the data (n) of a dlistint_t linked list
+7.  
